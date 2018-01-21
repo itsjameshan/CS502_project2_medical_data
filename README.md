@@ -24,7 +24,7 @@ Evaluation
 -   Mean Absolute Error
 SparkML are evaluated on Mean Absolute Error between the predicted log error and the actual log error. The log error is defined as
 
-'logerror=log(Zestimate)−log(SalePrice)'
+`logerror=log(Zestimate)−log(SalePrice)`
 
 and it is recorded in the transactions training data. If a transaction didn't happen for a property during that period of time, that row is ignored and not counted in the calculation of MAE.
 
@@ -90,7 +90,7 @@ Deliverable
 		Week 4: Starts and finishes unit testing
 		
 		Wei Cheng: Set UP Kafka, Data ingestion using kafka
-		Week 1: Starts implement data transformation layer, Set up Kafka Connect to load data from Zillow csv to Cassandra   [xx% completed]
+		Week 1: Starts implement data transformation layer, Set up Kafka Connect to load data from Zillow csv to Cassandra   [xx% completed] (work with James)
 		Week 2: Add error/exception handling and more comments in the source code
 		Week 3: 
 		Week 4: 
