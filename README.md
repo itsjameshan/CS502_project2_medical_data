@@ -14,7 +14,6 @@ Data Source
 
 Architecture
 ------------
-
 ![](images/architecture.png)
 -   [SMACK](http://bigdata-madesimple.com/smackspark-mesos-akka-kafka/)
 -   [MicroService](https://www.linkedin.com/pulse/how-go-from-lamp-microservices-eric-macdougall/)
