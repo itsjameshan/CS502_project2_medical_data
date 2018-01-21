@@ -66,7 +66,8 @@ Cluster Scheduling Layer
 
 ### Mesos
 
-
+​	
+​
 Deliverable
 ---------------
 
@@ -79,7 +80,7 @@ Deliverable
 	
 		James Han: 
 		Week 1: Set up Spark on AWS, Cassandra on AWS
-		Week 2: 
+		Week 2: Implement SparkML to calucalte log error to indicaste the accuracy of silumation of house sale                               price.
 		Week 3: Finishes implement data transformation layer: 
 			(1) Aggregate the data into formats to support the Cassandra data schemas in (2)
 			(2) Configure Cassandra data schema to support:
