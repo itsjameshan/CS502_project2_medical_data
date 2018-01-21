@@ -53,6 +53,7 @@ Data Storage
 |   house xxxxx   |    text   |
 |  log error |   float   |
 
+
 -   PRIMARY KEY (parcelID, timestamp)
 
 Data Computation
