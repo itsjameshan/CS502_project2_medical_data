@@ -4,17 +4,20 @@ Zillow House Price Prediction
 Introduction
 ------------
 
-This is a data pipeline project that predicts the sale price of House sold on Zillow, visualizes the trend, and using machine learning compared with the Zestimate prediction. Ideally, we will implement the Microservicee architecture using Spark, Hadoop, MapReduce, Mesos, Cassandra and Kafka (SMACK) stack and the front-end tool Superset.
+This is a data pipeline project that predicts the sale price of House sold on Zillow, visualizes the trend, and using machine learning compared with the Zestimate prediction. Ideally, we will implement the Microservicee architecture using Spark, Hadoop, MapReduce, Mesos, AKKA, Cassandra and Kafka (SMACK) stack and the front-end tool Superset.
 
 Data Source
 -----------
 
 -   [Zillow data from Kaggle](https://www.kaggle.com/c/zillow-prize-1#description)
 
+
 Architecture
 ------------
 
 ![](images/architecture.png)
+-   [SMACK](http://bigdata-madesimple.com/smackspark-mesos-akka-kafka/)
+-   [MicroService](https://www.linkedin.com/pulse/how-go-from-lamp-microservices-eric-macdougall/)
 
 Evaluation
 --------------
