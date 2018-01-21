@@ -4,29 +4,41 @@ Zillow House Price Prediction
 Introduction
 ------------
 
-This is a data pipeline project that predicts the Bitcoin price, visualizes the trend, and proposes the sell/buy decisions. Ideally, we will implement the Lambda architecture using Spark, Mesos, Akka, Cassandra and Kafka (SMACK) stack and the front-end tool Node.js.
+This is a data pipeline project that predicts the sale price of House sold on Zillow, visualizes the trend, and using machine learning compared with the Zestimate prediction. Ideally, we will implement the Microservicee architecture using Spark, Hadoop, MapReduce, Mesos, Cassandra and Kafka (SMACK) stack and the front-end tool Superset.
 
 Data Source
 -----------
 
--   [CoinDesk API](https://www.coindesk.com/api/)
--   [Twitter API](https://github.com/tweepy/tweepy/)
+-   [Zillow data from Kaggle](https://www.kaggle.com/c/zillow-prize-1#description)
 
 Architecture
 ------------
 
 ![](images/architecture.png)
 
+Evaluation
+--------------
+
+###
+
+-   Mean Absolute Error
+SparkML are evaluated on Mean Absolute Error between the predicted log error and the actual log error. The log error is defined as
+
+'logerror=log(Zestimate)−log(SalePrice)'
+
+and it is recorded in the transactions training data. If a transaction didn't happen for a property during that period of time, that row is ignored and not counted in the calculation of MAE.
+
+
 Data Ingestion
 --------------
 
 ### Kafka
 
--   User can specify currency and fetch bitcoin price by running fetch-bitcoin-price.py.
--   Bitcoin price will be sent to any kafka topic specified by user.
--   Code can be found here: [fetch-bitcoin-price.py](fetch-bitcoin-price.py). Screenshot: ![](images/data-producer.png) ![](images/data-producer-2.png)
+-   User can specify currency and fetch bitcoin price by running xxxxx.
+-   Zillow predicted log error will be sent to any kafka topic specified by user after SparkML processing.
+-   Code can be found here: [xxxxxxx](fetch-bitcoin-price.py). Screenshot: ![](images/xxxxx.png) ![](images/xxxxx.png)
 
-![](images/sentiments.png)
+![](images/xxxxxx.png)
 
 Data Storage
 ------------
@@ -38,12 +50,10 @@ Data Storage
 | column\_name |    type   |
 |:------------:|:---------:|
 |   timestamp  | timestamp |
-|   currency   |    text   |
-|  true\_price |   float   |
-|  pred\_price |   float   |
-|   sentiment  |   float   |
+|   house xxxxx   |    text   |
+|  log error |   float   |
 
--   PRIMARY KEY (currency, timestamp)
+-   PRIMARY KEY (parcelID, timestamp)
 
 Data Computation
 ----------------
@@ -58,4 +68,4 @@ Cluster Scheduling Layer
 Reference
 ---------
 
-[Bitcoin Price Prediction using Sentiment Analysis](http://www.ee.columbia.edu/~cylin/course/bigdata/projects/)
+[xxxxxx](http://xxxxxxx)
