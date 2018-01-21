@@ -1,16 +1,61 @@
-# CS502_project2_medical_data
-This is a data pipeline to analyze medical data
+Zillow House Price Prediction
+================
 
-								New Drug Notification System : Find the drug that suit you 
+Introduction
+------------
 
-## Introduction for business plan and pitch
-	We are planning to create a new drug notification system for patients/physicians to use. The idea is
-	simple, we are using the key words from patients/physicians to help us to look for the FDA (food and
-	drug administration) data set for the drugs that is related to this type of disease. For example,
-	patient with diabetes, we can look into the FDA’s data set to find drug that treat diabetes. We will
-	build a data pipeline to store and parse the data from FDA website via Kafka and Cassandra. We will
-	also apply machine learning model on the drugs that we receive from the data set and suggest the most
-	suitable drug back to the patients. Depends on which attribute that the patient cares the most. Some
-	patient may want a lower price drug, and some may not care about the price, but only on the
-	effectiveness of the drug.
+This is a data pipeline project that predicts the Bitcoin price, visualizes the trend, and proposes the sell/buy decisions. Ideally, we will implement the Lambda architecture using Spark, Mesos, Akka, Cassandra and Kafka (SMACK) stack and the front-end tool Node.js.
 
+Data Source
+-----------
+
+-   [CoinDesk API](https://www.coindesk.com/api/)
+-   [Twitter API](https://github.com/tweepy/tweepy/)
+
+Architecture
+------------
+
+![](images/architecture.png)
+
+Data Ingestion
+--------------
+
+### Kafka
+
+-   User can specify currency and fetch bitcoin price by running fetch-bitcoin-price.py.
+-   Bitcoin price will be sent to any kafka topic specified by user.
+-   Code can be found here: [fetch-bitcoin-price.py](fetch-bitcoin-price.py). Screenshot: ![](images/data-producer.png) ![](images/data-producer-2.png)
+
+![](images/sentiments.png)
+
+Data Storage
+------------
+
+### Cassandra
+
+-   schema
+
+| column\_name |    type   |
+|:------------:|:---------:|
+|   timestamp  | timestamp |
+|   currency   |    text   |
+|  true\_price |   float   |
+|  pred\_price |   float   |
+|   sentiment  |   float   |
+
+-   PRIMARY KEY (currency, timestamp)
+
+Data Computation
+----------------
+
+### Spark
+
+Cluster Scheduling Layer
+------------------------
+
+### Mesos
+
+Reference
+---------
+
+[Bitcoin Price Prediction using Sentiment Analysis](http://www.ee.columbia.edu/~cylin/course/bigdata/projects/)
