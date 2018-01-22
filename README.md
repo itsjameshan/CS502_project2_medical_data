@@ -53,7 +53,7 @@ Data Storage
 |:------------:|:---------:|
 |   timestamp  | timestamp |
 |   house xxxxx   |    text   |
-|  log error |   float   |
+|   log error |   float   |
 
 
 -   PRIMARY KEY (parcelID, timestamp)
@@ -86,9 +86,9 @@ Deliverable
 		Week 3: Finishes implement data transformation layer: 
 			(1) Aggregate the data into formats to support the Cassandra data schemas in (2)
 			(2) Configure Cassandra data schema to support:
-				a: Top 10 highest rating movie by a given month
-				b: Top 10 rated movie by a given month
-				c: Top rated month by a movie		
+				a: The predicted log error comapred wtih train log error
+				b: key matric indicate house sale pricing
+				c: dynamic log eroor in a time series manner.		
 		Week 4: Starts and finishes unit testing
 		
 		Wei Cheng: Set UP Kafka, Data ingestion using kafka
