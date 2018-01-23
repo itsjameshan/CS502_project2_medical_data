@@ -68,7 +68,11 @@ Cluster Scheduling Layer
 
 ### Mesos
 
-​	
+​
+### Mesos
+AWS set up 
+---------------
+Planning to use AWS clauster, Dynamo dp
 ​
 Deliverable
 ---------------
@@ -98,10 +102,11 @@ Deliverable
 		Week 4: 
 		
 		Howie:  Data visualization
-		Week 1: Set up UI, Determine the requirements to implement, get ready to fulfill the Nodejs module features;
+		Week 1: Set up UI, Determine the requirements to implement, get ready to fulfill the Nodejs module features; For the UI we are planing to use Node.js or Apache Superset (https://superset.incubator.apache.org/) depending on which one has better integration with Amazon AWS. For me is probably Node.js since we have done it in class. The A
 		Week 2: Setup backend for data visualization; simple front end to display data
-		Week 3: 
-		Week 4: 
+		Week 3: Display the UI with the data input 
+		Week 4: Testing and finish the function of the UI
+
 
 
 ​	
