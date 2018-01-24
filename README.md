@@ -98,8 +98,8 @@ Deliverable
 		Wei Cheng: Set UP Kafka, Data ingestion using kafka
 		Week 1: Starts implement data transformation layer, Set up Kafka Connect to load data from Zillow csv to Cassandra   [xx% completed] (work with James)
 		Week 2: Add error/exception handling and more comments in the source code
-		Week 3: 
-		Week 4: 
+		Week 3: Test and verify the system function on AWS
+		Week 4: Using Mesos to create a scalable cloud deployment environment
 		
 		Howie:  Data visualization
 		Week 1: Set up UI, Determine the requirements to implement, get ready to fulfill the Nodejs module features; For the UI we are planing to use Node.js or Apache Superset (https://superset.incubator.apache.org/) depending on which one has better integration with Amazon AWS. For me is probably Node.js since we have done it in class. The A
