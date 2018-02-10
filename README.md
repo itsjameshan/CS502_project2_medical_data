@@ -30,9 +30,10 @@ SparkML are evaluated on Mean Absolute Error between the predicted log error and
 
 and it is recorded in the transactions training data. If a transaction didn't happen for a property during that period of time, that row is ignored and not counted in the calculation of MAE.
 
-Data source:
+###Data source:
 The original house history records files are stored in AWS S3:
-https://s3.amazonaws.com/jameshantest/capstone/properties_2016.csv， 
+https://s3.amazonaws.com/jameshantest/capstone/properties_2016.csv
+
 https://s3.amazonaws.com/jameshantest/capstone/properties_2017.csv 
 
 Data Ingestion
@@ -44,9 +45,10 @@ Data Ingestion
 -   Code can be found here: [xxxxxxx](fetch-bitcoin-price.py). Screenshot: ![](images/xxxxx.png) ![](images/xxxxx.png)
 
 ### important comands:
-Start: zookeeper
+#Start: zookeeper
 ./bin/zookeeper-server-start.sh config/zookeeper.properties &
-Stop: zookeeper
+
+#Stop: zookeeper
 ./bin/zookeeper-server-stop.sh config/zookeeper.properties & 
 
 Start: Kafka
@@ -68,21 +70,23 @@ Data Storage
 |taxvaluedollarcnt|  text  |
 |transaction_date|   text  |
 
--   PRIMARY KEY (parcelID, timestamp)
+-   PRIMARY KEY (parcle_id)
 ### important comands:
-Run Cassandra:
+#Run Cassandra:
 bin/cassandra
 
-Kill cassandra:
-# user=`whoami`
-# pgrep -u $user -f cassandra | xargs kill -9
+#Kill cassandra:
+user=`whoami`
+pgrep -u $user -f cassandra | xargs kill -9
 
-see Cassandra status:
+#see Cassandra status:
 bin/nodetool status
 
-run CQL:
+#run CQL:
 ./bin/cqlsh 172.31.82.134
+
 use houseprice;  (Keyspace)
+
 select * from house limit 20;
 
 Data Computation
@@ -92,30 +96,31 @@ Data Computation
 
 Cluster Scheduling Layer
 ------------------------
-Install spark:
+#Install spark:
 wget https://archive.apache.org/dist/spark/spark-2.1.0/spark-2.1.0-bin-hadoop2.7.tgz
-In master node:
+#In master node:
 ./sbin/start-master.sh
 
-In slave node:
+#In slave node:
 ./sbin/start-slave.sh spark://ip-172-31-89-32.ec2.internal:7077
 
-WebUI:
+#WebUI:
 http://54.163.44.28:8080/
 
-Pyspark:
+#Pyspark:
 ./bin/pyspark spark://ip-172-31-89-32.ec2.internal:7077
 ​
-Submit python:
+#Submit python:
 ./bin/spark-submit --jars ~/code/spark-streaming-kafka-0-8-assembly_2.11-2.0.0.jar ~/code/data-stream.py
 
 AWS set up 
 ---------------
-Running data ingestion script:
+#Running data ingestion script:
 python data_producer.py properties_2016.csv test1 172.31.89.32:9092
+
 python data_producer.py properties_2017.csv test1 172.31.89.32:9092
 ​
-Running data storage script:
+#Running data storage script:
 python data_storage_aws.py test1 172.31.89.32:9092 54.163.44.28,34.207.87.67,54.164.0.73 houseprice house train_2016_v2.csv train_2017.csv
 
 Deliverable
